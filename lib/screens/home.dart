@@ -28,9 +28,16 @@ class _HomeScreenState extends State<HomeScreen> {
           Row(
             children: [
               const Expanded(child: HomeHeader()),
-              Image.asset(
-                generateImgPath('memoji', isSvg: false),
-              ).padX(3),
+              Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: CircleAvatar(
+                  backgroundColor: const Color(0xFFFFBFB6),
+                  radius: 15,
+                  child: Image.asset(
+                    generateImgPath('memoji', isSvg: false),
+                  ),
+                ),
+              ),
             ],
           ),
           const SizedBox(
@@ -50,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SvgPicture.asset(
                 generateImgPath('grid'),
-                height: 30,
+                height: 20,
               ),
             ],
           ),

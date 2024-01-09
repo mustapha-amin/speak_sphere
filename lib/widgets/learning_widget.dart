@@ -24,7 +24,10 @@ class LearningWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SvgPicture.asset(generateImgPath(learning.imgPath)),
+          SvgPicture.asset(
+            generateImgPath(learning.imgPath),
+            height: 30,
+          ),
           Text(
             learning.title!,
             style: kTextStyle(25, color: Colors.black, isBold: true),
@@ -33,12 +36,13 @@ class LearningWidget extends StatelessWidget {
             "You completed ${(learning.completedVal! * 100).floor()} %",
             style: kTextStyle(
               13,
-              color: Color(0xFF908A89),
+              color: const Color(0xFF908A89),
             ),
           ),
           LinearProgressIndicator(
             value: learning.completedVal,
             color: Color(AppColors.brownColor),
+            backgroundColor: const Color(0xFF908A89),
             minHeight: 5,
             borderRadius: BorderRadius.circular(10),
           ).padY(5),

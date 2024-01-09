@@ -3,7 +3,7 @@ import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/screens/btm_nav_bar.dart';
 import 'package:speak_sphere/utils/extensions.dart';
 import 'package:speak_sphere/utils/textstyle.dart';
-
+import 'package:dotted_border/dotted_border.dart';
 import '../constants/data.dart';
 
 class SetupScreen extends StatefulWidget {
@@ -101,16 +101,6 @@ class _SetupScreenState extends State<SetupScreen> {
                   },
                 ).padX(3),
               ),
-              FilterChip(
-                label: const Text("Add other +"),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  side: const BorderSide(
-                    color: Color(0xFF650C01),
-                  ),
-                ),
-                onSelected: (_) {},
-              )
             ],
           ),
           Column(
@@ -126,7 +116,7 @@ class _SetupScreenState extends State<SetupScreen> {
                     ),
                   ),
                   onPressed: () {
-                    context.push(BtmNavBar());
+                    context.push(const BtmNavBar());
                   },
                   child: Text(
                     "Continue",

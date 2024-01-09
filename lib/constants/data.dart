@@ -26,6 +26,7 @@ List<String> interests = [
   "Romance",
   "Shopping",
   "Sight-seeing",
+  "Add other +"
 ];
 
 List<Learning> learningList = [

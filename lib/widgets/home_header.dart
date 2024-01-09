@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/utils/extensions.dart';
+import 'package:speak_sphere/utils/textstyle.dart';
 
 import '../constants/image_paths.dart';
 
@@ -30,7 +32,10 @@ class HomeHeader extends StatelessWidget {
                 generateImgPath('fire'),
                 width: 30,
               ),
-              Text("2"),
+              Text(
+                "2",
+                style: kTextStyle(18, color: Color(AppColors.brownColor)),
+              ),
             ],
           ),
           Row(
@@ -39,7 +44,10 @@ class HomeHeader extends StatelessWidget {
                 generateImgPath('target'),
                 width: 28,
               ),
-              Text("17")
+              Text(
+                "17",
+                style: kTextStyle(18, color: Color(AppColors.brownColor)),
+              )
             ],
           ),
           SvgPicture.asset(
