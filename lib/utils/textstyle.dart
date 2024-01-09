@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-kTextStyle(double? size, {Color? color, bool? isBold = false}) {
+TextStyle kTextStyle(double? size, {Color? color, bool? isBold = false}) {
   return TextStyle(
     fontSize: size,
     color: color ?? Colors.white,

@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const Expanded(child: HomeHeader()),
               Padding(
-                padding: EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 10),
                 child: CircleAvatar(
                   backgroundColor: const Color(0xFFFFBFB6),
                   radius: 15,
@@ -55,14 +55,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   isBold: true,
                 ),
               ),
-              SvgPicture.asset(
-                generateImgPath('grid'),
-                height: 20,
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: SvgPicture.asset(
+                  generateImgPath('grid'),
+                  height: 18,
+                ),
               ),
             ],
           ),
           Expanded(
             child: GridView(
+              physics: const BouncingScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 30,
@@ -75,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 )
               ],
-            ),
+            ).padY(10),
           )
         ],
       ).padX(18),

@@ -3,7 +3,6 @@ import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/screens/btm_nav_bar.dart';
 import 'package:speak_sphere/utils/extensions.dart';
 import 'package:speak_sphere/utils/textstyle.dart';
-import 'package:dotted_border/dotted_border.dart';
 import '../constants/data.dart';
 
 class SetupScreen extends StatefulWidget {
@@ -36,14 +35,14 @@ class _SetupScreenState extends State<SetupScreen> {
               SizedBox(
                 width: context.screenWidth * .8,
                 child: LinearProgressIndicator(
-                  value: .84,
+                  value: selected.length / 6,
                   color: Color(AppColors.brownColor),
                   borderRadius: BorderRadius.circular(20),
                   minHeight: 8,
                 ),
               ),
               Text(
-                "5 / 6",
+                "${selected.length} / 6",
                 style: kTextStyle(13, color: Colors.black),
               ),
             ],
@@ -109,18 +108,22 @@ class _SetupScreenState extends State<SetupScreen> {
             children: [
               SizedBox(
                 width: context.screenWidth * .85,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
+                child: ValueListenableBuilder(
+                  valueListenable: ValueNotifier(selected.length == 6),
+                  builder: (context, isEnabled, _) => ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      disabledBackgroundColor: Colors.brown[300],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                     ),
-                  ),
-                  onPressed: () {
-                    context.push(const BtmNavBar());
-                  },
-                  child: Text(
-                    "Continue",
-                    style: kTextStyle(20),
+                    onPressed: isEnabled
+                        ? () => context.push(const BtmNavBar())
+                        : null,
+                    child: Text(
+                      "Continue",
+                      style: kTextStyle(20),
+                    ),
                   ),
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:speak_sphere/constants/appcolors.dart';
+import 'package:speak_sphere/screens/streaks_screen.dart';
 import 'package:speak_sphere/utils/extensions.dart';
 import 'package:speak_sphere/utils/textstyle.dart';
 
@@ -26,17 +27,22 @@ class HomeHeader extends StatelessWidget {
             generateImgPath('flag'),
             width: 28,
           ),
-          Row(
-            children: [
-              SvgPicture.asset(
-                generateImgPath('fire'),
-                width: 30,
-              ),
-              Text(
-                "2",
-                style: kTextStyle(18, color: Color(AppColors.brownColor)),
-              ),
-            ],
+          GestureDetector(
+            onTap: () {
+              context.push(const StreakScreen());
+            },
+            child: Row(
+              children: [
+                SvgPicture.asset(
+                  generateImgPath('fire'),
+                  width: 30,
+                ),
+                Text(
+                  "2",
+                  style: kTextStyle(18, color: Color(AppColors.brownColor)),
+                ),
+              ],
+            ),
           ),
           Row(
             children: [
