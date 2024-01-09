@@ -31,6 +31,7 @@ class _BtmNavBarState extends State<BtmNavBar> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(AppColors.bgColor),
         selectedItemColor: Color(AppColors.brownColor),
         unselectedItemColor: Colors.grey[900],
         type: BottomNavigationBarType.fixed,

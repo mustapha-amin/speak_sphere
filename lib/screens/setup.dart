@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/screens/btm_nav_bar.dart';

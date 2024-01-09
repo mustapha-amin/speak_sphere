@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
           foregroundColor: Color(AppColors.brownColor),
         )),
       ),
-      home: SetupScreen(),
+      home: const SetupScreen(),
     );
   }
 }

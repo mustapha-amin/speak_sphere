@@ -19,7 +19,7 @@ extension WidgetExtensions on Widget {
 
   Padding padY(double? size) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: size!),
+      padding: EdgeInsets.symmetric(vertical: size!),
       child: this,
     );
   }
