@@ -53,6 +53,6 @@ class LessonWidget extends StatelessWidget {
           ),
         ),
       ],
-    ).padX(13).padY(10);
+    ).padX(13).padY(5);
   }
 }

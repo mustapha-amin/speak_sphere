@@ -18,21 +18,25 @@ class _LessonsScreenState extends State<LessonsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(
-            height: 50,
-          ),
-          const HomeHeader().padX(40),
-          const SizedBox(
-            height: 30,
-          ),
-          const SegmentedBttn(),
-          Expanded(
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 50,
+            ),
+            const HomeHeader().padX(40),
+            const SizedBox(
+              height: 30,
+            ),
+            const SegmentedBttn(),
+            Column(
               children: [
+                const SizedBox(
+                  height: 10,
+                ),
                 ...lessonList.map(
                   (lesson) => LessonWidget(
                     lesson: lesson,
@@ -41,8 +45,8 @@ class _LessonsScreenState extends State<LessonsScreen> {
                 )
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

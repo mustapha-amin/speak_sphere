@@ -13,12 +13,12 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 23,
+      height: 28,
       decoration: BoxDecoration(
         border: Border.all(
           color: const Color(0xFF908A89),
         ),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +35,7 @@ class HomeHeader extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   generateImgPath('fire'),
-                  width: 30,
+                  width: 28,
                 ),
                 Text(
                   "2",
@@ -58,7 +58,7 @@ class HomeHeader extends StatelessWidget {
           ),
           SvgPicture.asset(
             generateImgPath('notification'),
-            width: 28,
+            width: 25,
           ),
         ],
       ).padX(10).padY(2),

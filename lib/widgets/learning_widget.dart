@@ -19,7 +19,7 @@ class LearningWidget extends StatelessWidget {
           color: Color(AppColors.brownColor),
           width: 0.5,
         ),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(18),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

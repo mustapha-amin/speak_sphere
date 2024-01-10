@@ -66,7 +66,7 @@ class _SegmentedBttnState extends State<SegmentedBttn> {
               child: Text(
                 "Video lesson",
                 style: kTextStyle(
-                  18,
+                  16,
                   color:
                       audioIsSelected ? const Color(0xFF908A89) : Colors.white,
                 ),
