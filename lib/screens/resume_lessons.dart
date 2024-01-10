@@ -38,7 +38,7 @@ class _ResumeLessonsState extends State<ResumeLessons> {
                         color: Colors.black,
                       ),
                       SizedBox(
-                        width: context.screenWidth * .75,
+                        width: context.screenWidth * .8,
                         child: LinearProgressIndicator(
                           value: .6,
                           color: Color(AppColors.brownColor),

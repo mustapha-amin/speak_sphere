@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:speak_sphere/constants/image_paths.dart';
 
+import '../models/challenge.dart';
 import '../models/learn.dart';
 import '../models/lesson.dart';
 
@@ -66,5 +68,59 @@ List<Lesson> lessonList = [
     body:
         "You will learn to communicate with your colleagues and understand them!",
     imgPath: generateImgPath('patners', isSvg: false),
+  ),
+];
+
+List<Challenge> challengeList = [
+  Challenge(
+    title: "17",
+    subtitle: "Challenges",
+    icon: SvgPicture.asset(generateImgPath('target')),
+  ),
+  Challenge(
+    title: "17",
+    subtitle: "Lessons passed",
+    icon: const Stack(
+      alignment: Alignment.bottomRight,
+      children: [
+        Icon(
+          Icons.bookmark,
+          size: 25,
+        ),
+        Icon(
+          Icons.play_arrow,
+          size: 10,
+        )
+      ],
+    ),
+  ),
+  Challenge(
+    title: "05",
+    subtitle: "Total Diamond",
+    icon: const Icon(
+      Icons.diamond_outlined,
+      color: Colors.blue,
+    ),
+  ),
+  Challenge(
+    title: "11,147",
+    subtitle: "Total lifetime XP",
+    icon: const Icon(
+      Icons.flash_on,
+      color: Colors.amber,
+    ),
+  ),
+  Challenge(
+    title: "02",
+    subtitle: "Streaks",
+    icon: SvgPicture.asset(generateImgPath('fire')),
+  ),
+  Challenge(
+    title: "36",
+    subtitle: "Top 20% global",
+    icon: Image.asset(
+      generateImgPath('award', isSvg: false),
+      height: 15,
+    ),
   ),
 ];

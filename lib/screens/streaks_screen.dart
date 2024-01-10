@@ -36,7 +36,10 @@ class StreakScreen extends StatelessWidget {
                     "days streak! ",
                     style: kTextStyle(20, color: Colors.black),
                   ),
-                  SvgPicture.asset(generateImgPath('fire')),
+                  SvgPicture.asset(
+                    generateImgPath('fire'),
+                    height: 16,
+                  ),
                 ],
               ),
             ],
