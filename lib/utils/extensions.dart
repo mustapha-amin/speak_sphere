@@ -7,6 +7,15 @@ extension BuildContextExts on BuildContext {
   void push(Widget? screen) {
     Navigator.push(this, MaterialPageRoute(builder: (context) => screen!));
   }
+
+  void pop() {
+    Navigator.pop(this);
+  }
+
+  void replaceWith(Widget? screen) {
+    Navigator.pushReplacement(
+        this, MaterialPageRoute(builder: (context) => screen!));
+  }
 }
 
 extension WidgetExtensions on Widget {

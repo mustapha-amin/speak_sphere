@@ -47,24 +47,24 @@ List<Lesson> lessonList = [
     title: "First Trip",
     body:
         "Here you will listen to conversations between tourists, and learn to speak together with them!",
-    imgPath: generateImgPath('trip'),
+    imgPath: generateImgPath('trip', isSvg: false),
   ),
   Lesson(
     title: "Freelance Work",
     body:
         "After taking this classes, you will be able to take orders from foreigners! ",
-    imgPath: generateImgPath('work'),
+    imgPath: generateImgPath('work', isSvg: false),
   ),
   Lesson(
     title: "First Meeting",
     body:
         "You will learn to communicate with your colleagues and understand them!",
-    imgPath: generateImgPath('meeting'),
+    imgPath: generateImgPath('meeting', isSvg: false),
   ),
   Lesson(
     title: "Meeting with Patners",
     body:
         "You will learn to communicate with your colleagues and understand them!",
-    imgPath: generateImgPath('partners'),
+    imgPath: generateImgPath('patners', isSvg: false),
   ),
 ];

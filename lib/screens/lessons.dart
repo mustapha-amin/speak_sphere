@@ -29,11 +29,19 @@ class _LessonsScreenState extends State<LessonsScreen> {
             height: 50,
           ),
           const SegmentedBttn(),
-          ...lessonList.map(
-            (lesson) => LessonWidget(
-              lesson: lesson,
+          Expanded(
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
+              children: [
+                ...lessonList.map(
+                  (lesson) => LessonWidget(
+                    lesson: lesson,
+                    index: lessonList.indexOf(lesson),
+                  ),
+                )
+              ],
             ),
-          )
+          ),
         ],
       ),
     );

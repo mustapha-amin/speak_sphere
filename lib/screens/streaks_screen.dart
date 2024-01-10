@@ -103,7 +103,7 @@ class StreakScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    // context.push(const BtmNavBar());
+                    context.pop();
                   },
                   child: Text(
                     "Continue",
@@ -112,7 +112,9 @@ class StreakScreen extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: Text(
                   "Share",
                   style: kTextStyle(18, color: Color(AppColors.brownColor)),
