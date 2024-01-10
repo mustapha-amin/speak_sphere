@@ -95,7 +95,9 @@ class _SetupScreenState extends State<SetupScreen> {
                     setState(() {
                       selected.contains(e)
                           ? selected.remove(e)
-                          : selected.add(e);
+                          : selected.length < 6
+                              ? selected.add(e)
+                              : null;
                     });
                   },
                 ).padX(3),
