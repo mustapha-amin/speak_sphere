@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/constants/data.dart';
 import 'package:speak_sphere/constants/image_paths.dart';
+import 'package:speak_sphere/screens/resume_lessons.dart';
 import 'package:speak_sphere/utils/extensions.dart';
 import 'package:speak_sphere/widgets/home_header.dart';
 import 'package:speak_sphere/widgets/learning_widget.dart';
@@ -74,8 +75,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               children: [
                 ...learningList.map(
-                  (e) => LearningWidget(
-                    learning: e,
+                  (mode) => GestureDetector(
+                    onTap: mode.title! == "Speaking"
+                        ? () => context.push(
+                              const ResumeLessons(),
+                            )
+                        : null,
+                    child: LearningWidget(
+                      learning: mode,
+                    ),
                   ),
                 )
               ],
