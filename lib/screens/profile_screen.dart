@@ -41,16 +41,34 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Column(
               children: [
-                Hero(
-                  tag: 'memoji',
-                  child: CircleAvatar(
-                    radius: 45,
-                    backgroundColor: const Color(0xFFFFBFB6),
-                    child: Image.asset(
-                      generateImgPath('profile', isSvg: false),
-                      height: 130,
+                Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    Hero(
+                      tag: 'memoji',
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundColor: const Color(0xFFFFBFB6),
+                        child: Image.asset(
+                          generateImgPath('profile', isSvg: false),
+                          height: 130,
+                        ),
+                      ),
                     ),
-                  ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(AppColors.brownColor),
+                        shape: BoxShape.circle,
+                      ),
+                      width: 25,
+                      height: 25,
+                      child: const Icon(
+                        Icons.edit_outlined,
+                        color: Colors.white,
+                        size: 15,
+                      ),
+                    )
+                  ],
                 ),
                 Text(
                   "Buchi Allwell",
@@ -73,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
                 const ProfileHighlights(),
                 SizedBox(
                   width: context.screenWidth * .43,
-                  height: context.screenHeight * .06,
+                  height: context.screenHeight * .055,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(

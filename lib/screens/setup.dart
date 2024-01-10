@@ -39,6 +39,7 @@ class _SetupScreenState extends State<SetupScreen> {
                   color: Color(AppColors.brownColor),
                   borderRadius: BorderRadius.circular(20),
                   minHeight: 8,
+                  backgroundColor: const Color(0xFF908A89),
                 ),
               ),
               Text(

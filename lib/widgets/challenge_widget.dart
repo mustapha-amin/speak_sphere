@@ -24,6 +24,7 @@ class ChallengeWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           challenge.icon!,
+          const SizedBox(width: 4),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -33,7 +34,7 @@ class ChallengeWidget extends StatelessWidget {
               ),
               Text(
                 challenge.subtitle!,
-                style: kTextStyle(15, color: Colors.grey, isBold: true),
+                style: kTextStyle(14, color: Colors.grey, isBold: true),
               ),
             ],
           ),

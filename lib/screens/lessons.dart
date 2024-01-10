@@ -26,7 +26,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
           ),
           const HomeHeader().padX(40),
           const SizedBox(
-            height: 50,
+            height: 30,
           ),
           const SegmentedBttn(),
           Expanded(

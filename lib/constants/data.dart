@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/constants/image_paths.dart';
+import 'package:speak_sphere/utils/extensions.dart';
 
 import '../models/challenge.dart';
 import '../models/learn.dart';
@@ -75,21 +77,27 @@ List<Challenge> challengeList = [
   Challenge(
     title: "17",
     subtitle: "Challenges",
-    icon: SvgPicture.asset(generateImgPath('target')),
+    icon: SvgPicture.asset(generateImgPath('target'), height: 20),
   ),
   Challenge(
     title: "17",
     subtitle: "Lessons passed",
-    icon: const Stack(
+    icon: Stack(
       alignment: Alignment.bottomRight,
       children: [
-        Icon(
-          Icons.bookmark,
+        const Icon(
+          Icons.bookmark_outline,
           size: 25,
         ),
-        Icon(
-          Icons.play_arrow,
-          size: 10,
+        Positioned(
+          right: 0,
+          child: Container(
+            color: Color(AppColors.bgColor),
+            child: const Icon(
+              Icons.play_arrow_rounded,
+              size: 10,
+            ).centralize(),
+          ),
         )
       ],
     ),
@@ -113,14 +121,17 @@ List<Challenge> challengeList = [
   Challenge(
     title: "02",
     subtitle: "Streaks",
-    icon: SvgPicture.asset(generateImgPath('fire')),
+    icon: SvgPicture.asset(
+      generateImgPath('fire'),
+      height: 20,
+    ),
   ),
   Challenge(
     title: "36",
     subtitle: "Top 20% global",
     icon: Image.asset(
       generateImgPath('award', isSvg: false),
-      height: 15,
+      height: 20,
     ),
   ),
 ];
