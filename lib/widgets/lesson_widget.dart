@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sizer/sizer.dart';
+import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/constants/image_paths.dart';
 import 'package:speak_sphere/models/lesson.dart';
 import 'package:speak_sphere/utils/extensions.dart';
@@ -15,31 +17,39 @@ class LessonWidget extends StatelessWidget {
     return Stack(
       alignment: Alignment.centerLeft,
       children: [
+        SizedBox(
+          height: 20.h,
+        ),
         ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(40)),
           child: Image.asset(
             lesson.imgPath,
-            width: context.screenWidth,
-            height: context.screenHeight * .2,
+            height: 18.h,
             color: Colors.black.withOpacity(0.2),
             colorBlendMode: BlendMode.overlay,
           ),
         ),
-        Text.rich(
-          TextSpan(
-            text: '${lesson.title}\n',
-            style: kTextStyle(23, isBold: true),
-            children: [
+        Positioned(
+          left: 3.w,
+          child: SizedBox(
+            width: 60.w,
+            child: Text.rich(
               TextSpan(
-                text: lesson.body,
-                style: kTextStyle(13),
+                text: '${lesson.title}\n',
+                style: kTextStyle(23, isBold: true),
+                children: [
+                  TextSpan(
+                    text: lesson.body,
+                    style: kTextStyle(13),
+                  ),
+                ],
               ),
-            ],
+              maxLines: 4,
+            ),
           ),
-        ).padX(10),
+        ),
         Positioned(
           right: 3,
-          bottom: 1,
+          bottom: 0,
           child: SvgPicture.asset(
             generateImgPath(
               switch (index) {
@@ -51,7 +61,7 @@ class LessonWidget extends StatelessWidget {
             ),
             height: 40,
           ),
-        ),
+        )
       ],
     ).padX(13).padY(5);
   }

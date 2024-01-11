@@ -32,14 +32,18 @@ class ChallengeWidget extends StatelessWidget {
                 challenge.title!,
                 style: kTextStyle(18, color: Colors.black),
               ),
-              Text(
-                challenge.subtitle!,
-                style: kTextStyle(14, color: Colors.grey, isBold: true),
+              Wrap(
+                children: [
+                  Text(
+                    challenge.subtitle!,
+                    style: kTextStyle(13, color: Colors.grey, isBold: true),
+                  ),
+                ],
               ),
             ],
           ),
         ],
-      ).padAll(7),
+      ).padAll(7).centralize(),
     );
   }
 }

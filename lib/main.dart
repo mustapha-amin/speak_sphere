@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:speak_sphere/screens/btm_nav_bar.dart';
 import 'package:speak_sphere/screens/setup.dart';
 import 'package:speak_sphere/screens/splash_screen.dart';
@@ -27,7 +28,11 @@ class MainApp extends StatelessWidget {
           foregroundColor: Color(AppColors.brownColor),
         )),
       ),
-      home: const SplashScreen(),
+      home: Sizer(
+        builder: (context, _, __) {
+          return const SplashScreen();
+        },
+      ),
     );
   }
 }

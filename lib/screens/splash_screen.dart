@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-     Future.delayed(const Duration(seconds: 2), () {
+     Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         isVisible = true;
       });
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       precacheImage(AssetImage(generateImgPath('splashbg', isSvg: false)), context);
       Future.delayed(
-          const Duration(seconds: 3), () => context.replaceWith(const SetupScreen()));
+          const Duration(seconds: 4), () => context.replaceWith(const SetupScreen()));
     });
   }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:speak_sphere/constants/image_paths.dart';
 import 'package:speak_sphere/utils/extensions.dart';
-
+import 'package:sizer/sizer.dart';
 import '../constants/appcolors.dart';
 import '../utils/textstyle.dart';
 
@@ -66,7 +66,7 @@ class _ResumeLessonsState extends State<ResumeLessons> {
                     children: [
                       SvgPicture.asset(
                         generateImgPath('speaker'),
-                        height: 26,
+                        height: 26.sp,
                       ),
                       const SizedBox(
                         height: 18,

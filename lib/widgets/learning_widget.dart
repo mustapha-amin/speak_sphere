@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sizer/sizer.dart';
 import 'package:speak_sphere/constants/appcolors.dart';
 import 'package:speak_sphere/constants/image_paths.dart';
 import 'package:speak_sphere/models/learn.dart';
@@ -13,7 +14,6 @@ class LearningWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.screenHeight * .3,
       decoration: BoxDecoration(
         border: Border.all(
           color: Color(AppColors.brownColor),
@@ -26,16 +26,16 @@ class LearningWidget extends StatelessWidget {
         children: [
           SvgPicture.asset(
             generateImgPath(learning.imgPath),
-            height: 30,
+            height: 28.sp,
           ),
           Text(
             learning.title!,
-            style: kTextStyle(25, color: Colors.black, isBold: true),
+            style: kTextStyle(23, color: Colors.black, isBold: true),
           ),
           Text(
             "You completed ${(learning.completedVal! * 100).floor()} %",
             style: kTextStyle(
-              13,
+              12,
               color: const Color(0xFF908A89),
             ),
           ),
