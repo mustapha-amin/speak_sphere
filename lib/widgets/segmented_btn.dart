@@ -18,7 +18,7 @@ class _SegmentedBttnState extends State<SegmentedBttn> {
   Widget build(BuildContext context) {
     return Container(
       width: 85.w,
-      height: 7.h,
+      height: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         border: Border.all(
