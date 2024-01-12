@@ -17,7 +17,7 @@ class LearningWidget extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           color: Color(AppColors.brownColor),
-          width: 0.5,
+          width: 0.8,
         ),
         borderRadius: BorderRadius.circular(18),
       ),

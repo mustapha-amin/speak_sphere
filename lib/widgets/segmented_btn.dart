@@ -38,7 +38,7 @@ class _SegmentedBttnState extends State<SegmentedBttn> {
                   color: Color(audioIsSelected
                       ? AppColors.brownColor
                       : AppColors.bgColor),
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(25),
                 ),
                 child: Text(
                   "Audio lesson",
